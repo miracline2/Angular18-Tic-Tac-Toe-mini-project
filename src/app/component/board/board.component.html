@@ -1,0 +1,22 @@
+
+    <h1 class="heading"> Tic Tac Toe 🎮 </h1>
+
+<div class="container">
+<h1>Current Player : {{player}} </h1>
+<button (click)="startNewGame()" mat-raised-button> Start New Game </button>
+<h2 *ngIf="winner">
+    player {{winner}} won the Game
+</h2>
+</div>
+    <main>
+    
+    <app-x-o-button *ngFor="let val of square; let i = index"
+    [value]="val"
+    (click)="playerChoice(i)" >
+
+
+    </app-x-o-button>
+    
+    </main>
+
+
